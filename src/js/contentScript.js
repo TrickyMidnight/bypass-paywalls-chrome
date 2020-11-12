@@ -166,9 +166,10 @@ if (matchDomain('elmercurio.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const topBanner = document.querySelector('div[data-temptation-position="PAGE_TOP"]');
     const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
+    const altPaywall = document.querySelector('aside[data-temptation-position="ARTICLE_BOTTOM"]');
     const hiddenSection = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
     const overlay = document.querySelector('div[data-temptation-position="PAGE_BOTTOM"]');
-    removeDOMElement(topBanner, paywall, hiddenSection, overlay);
+    removeDOMElement(topBanner, paywall, altPaywall, hiddenSection, overlay);
   });
 } else if (matchDomain('firstthings.com')) {
   const paywall = document.getElementsByClassName('paywall')[0];
